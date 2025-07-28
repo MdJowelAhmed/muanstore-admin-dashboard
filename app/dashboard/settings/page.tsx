@@ -224,41 +224,49 @@ export default function SettingsPage() {
               <CardDescription>Update your account password</CardDescription>
             </CardHeader>
             <CardContent className="">
-              <div className="space-y-6">
-                <div className="space-y-2 flex justify-center">
-                  <Label htmlFor="currentPassword">Current Password</Label>
-                </div>
-                <div className="flex justify-center">
-                  <Input
-                    id="currentPassword"
-                    type="password"
-                    placeholder="Enter current password"
-                    className="w-1/2"
-                  />
-                </div>
-
-                <div className="space-y-2 flex justify-center">
-                  <Label htmlFor="newPassword">New Password</Label>
-                </div>
-                <div className="flex justify-center">
-                  <Input
-                    id="newPassword"
-                    type="password"
-                    placeholder="Enter new password"
-                    className="w-1/2"
-                  />
+              <div className="space-y-5">
+                <div className="space-y-2">
+                  <div className="space-y-2 flex justify-center">
+                    <Label htmlFor="currentPassword">Current Password</Label>
+                  </div>
+                  <div className="flex justify-center">
+                    <Input
+                      id="currentPassword"
+                      type="password"
+                      placeholder="Enter current password"
+                      className="w-1/2"
+                    />
+                  </div>
                 </div>
 
-                <div className="space-y-2 flex justify-center">
-                  <Label htmlFor="confirmPassword">Confirm New Password</Label>
+                <div className="space-y-2">
+                  <div className="space-y-2 flex justify-center">
+                    <Label htmlFor="newPassword">New Password</Label>
+                  </div>
+                  <div className="flex justify-center">
+                    <Input
+                      id="newPassword"
+                      type="password"
+                      placeholder="Enter new password"
+                      className="w-1/2"
+                    />
+                  </div>
                 </div>
-                <div className="flex justify-center">
-                  <Input
-                    id="confirmPassword"
-                    type="password"
-                    placeholder="Confirm new password"
-                    className="w-1/2"
-                  />
+
+                <div className="space-y-2">
+                  <div className="space-y-2 flex justify-center">
+                    <Label htmlFor="confirmPassword">
+                      Confirm New Password
+                    </Label>
+                  </div>
+                  <div className="flex justify-center">
+                    <Input
+                      id="confirmPassword"
+                      type="password"
+                      placeholder="Confirm new password"
+                      className="w-1/2"
+                    />
+                  </div>
                 </div>
               </div>
 

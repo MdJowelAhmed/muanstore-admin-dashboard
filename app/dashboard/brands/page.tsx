@@ -148,7 +148,7 @@ export default function BrandsPage() {
                     <TableRow>
                       <TableHead>Image</TableHead>
                       <TableHead>Name</TableHead>
-                      <TableHead>Description</TableHead>
+                      {/* <TableHead>Description</TableHead> */}
                       <TableHead>Products</TableHead>
                       <TableHead>Created</TableHead>
                       <TableHead className="text-right">Actions</TableHead>

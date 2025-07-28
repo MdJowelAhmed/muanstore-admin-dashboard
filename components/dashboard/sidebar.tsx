@@ -35,7 +35,7 @@ const menuItems = [
   { title: 'User Management', href: '/dashboard/users', icon: Users },
   // { title: 'Subscriber Management', href: '/dashboard/subscribers', icon: UserCheck },
   { title: 'News Management', href: '/dashboard/news-management', icon: Newspaper },
-  { title: 'Banner Management', href: '/dashboard/banner-management', icon: Image },
+  // { title: 'Banner Management', href: '/dashboard/banner-management', icon: Image },
   { title: 'Support Chat', href: '/dashboard/support', icon: MessageCircle },
   // { title: 'Push Notifications', href: '/dashboard/notifications', icon: Bell },
  

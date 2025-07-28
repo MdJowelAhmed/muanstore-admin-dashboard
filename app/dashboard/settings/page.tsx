@@ -129,7 +129,7 @@ export default function SettingsPage() {
           <TabsTrigger value="profile">Profile</TabsTrigger>
           <TabsTrigger value="changePassword">Change Password</TabsTrigger>
           <TabsTrigger value="privacyPolicy">Privacy Policy</TabsTrigger>
-           <TabsTrigger value="termsCondition">Terms & Condition</TabsTrigger>
+          <TabsTrigger value="termsCondition">Terms & Condition</TabsTrigger>
         </TabsList>
 
         <TabsContent value="profile" className="space-y-6">
@@ -274,37 +274,32 @@ export default function SettingsPage() {
 
         <TabsContent value="privacyPolicy" className="space-y-6">
           <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <FileText className="h-5 w-5" />
-                Privacy Policy
-              </CardTitle>
-              <CardDescription>
-                Our privacy policy and how we handle your data
-              </CardDescription>
-            </CardHeader>
+            <div className="flex justify-between items-center mr-7">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <FileText className="h-5 w-5" />
+                  Privacy Policy
+                </CardTitle>
+              </CardHeader>
+              <Button onClick={() => setIsPrivacyModalOpen(true)}>
+                Edit Privacy Policy
+              </Button>
+            </div>
             <CardContent>
-              <div className="space-y-4">
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="font-medium">Privacy Policy Content</h3>
-                  <Button onClick={() => setIsPrivacyModalOpen(true)}>
-                    Edit Privacy Policy
-                  </Button>
-                </div>
-
-                <div className="p-4 border rounded-lg max-h-64 overflow-y-auto">
+              <div className="space-y-">
+                <div className="p-4 border rounded-lg max-h-[500px] overflow-y-auto">
                   <div
                     dangerouslySetInnerHTML={{ __html: privacyPolicy }}
                     className="prose max-w-none"
                   />
                 </div>
 
-                <div className="flex items-center space-x-2">
+                {/* <div className="flex items-center space-x-2">
                   <Switch id="acceptPrivacy" />
                   <Label htmlFor="acceptPrivacy">
                     I have read and accept the Privacy Policy
                   </Label>
-                </div>
+                </div> */}
               </div>
             </CardContent>
           </Card>
@@ -344,37 +339,33 @@ export default function SettingsPage() {
 
         <TabsContent value="termsCondition" className="space-y-6">
           <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <ScrollText className="h-5 w-5" />
-                Terms and Conditions
-              </CardTitle>
-              <CardDescription>
-                Terms of service and user agreements
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-4">
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="font-medium">Terms and Conditions Content</h3>
-                  <Button onClick={() => setIsTermsModalOpen(true)}>
-                    Edit Terms and Conditions
-                  </Button>
-                </div>
+            <div className="flex justify-between items-center mr-7">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <ScrollText className="h-5 w-5" />
+                  Terms and Conditions
+                </CardTitle>
+              </CardHeader>
 
-                <div className="p-4 border rounded-lg max-h-64 overflow-y-auto">
+              <Button onClick={() => setIsTermsModalOpen(true)}>
+                Edit Terms and Conditions
+              </Button>
+            </div>
+            <CardContent>
+              <div className="space-y-">
+                <div className="p-4 border rounded-lg max-h-[500px] overflow-y-auto">
                   <div
                     dangerouslySetInnerHTML={{ __html: termsConditions }}
                     className="prose max-w-none"
                   />
                 </div>
 
-                <div className="flex items-center space-x-2">
+                {/* <div className="flex items-center space-x-2">
                   <Switch id="acceptTerms" />
                   <Label htmlFor="acceptTerms">
                     I have read and accept the Terms and Conditions
                   </Label>
-                </div>
+                </div> */}
               </div>
             </CardContent>
           </Card>

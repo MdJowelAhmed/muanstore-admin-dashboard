@@ -9,6 +9,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Plus, Edit, Trash2, Eye } from 'lucide-react';
 import { SubCategory } from '@/types';
+import Image from 'next/image';
 
 export default function SubCategoriesPage() {
   const [showForm, setShowForm] = useState(false);
@@ -86,9 +87,11 @@ export default function SubCategoriesPage() {
               <CardContent>
                 {subCategory.image && (
                   <div className="aspect-video bg-gray-100 rounded-lg mb-4 overflow-hidden">
-                    <img
+                    <Image
                       src={subCategory.image}
                       alt={subCategory.name}
+                      height={200}
+                      width={200}
                       className="w-full h-full object-cover"
                     />
                   </div>

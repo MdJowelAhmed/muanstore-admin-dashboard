@@ -11,6 +11,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Switch } from '@/components/ui/switch';
 import { Banner } from '@/types';
 import { Image as ImageIcon } from 'lucide-react';
+import Image from 'next/image';
 
 interface BannerModalProps {
   isOpen: boolean;
@@ -129,9 +130,12 @@ export function BannerModal({ isOpen, onClose, banner, isEditing = false }: Bann
               <div className="flex items-center gap-4">
                 <div className="h-24 w-40 bg-muted rounded-md overflow-hidden relative">
                   {imagePreview ? (
-                    <img 
+                    <Image
                       src={imagePreview} 
+
                       alt="Banner preview" 
+                      height={100}
+                      width={100}
                       className="h-full w-full object-cover"
                     />
                   ) : (

@@ -21,6 +21,7 @@ import { ImageUpload } from '@/components/dashboard/image-upload';
 import { Product } from '@/types';
 import { Card, CardContent } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
+import { Image } from '@radix-ui/react-avatar';
 
 interface ProductModalProps {
   isOpen: boolean;
@@ -178,9 +179,11 @@ export function ProductModal({ isOpen, onClose, product, mode }: ProductModalPro
             <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
               {product.images.map((image, index) => (
                 <div key={index} className="aspect-square bg-gray-100 rounded-lg overflow-hidden">
-                  <img
+                  <Image
                     src={image}
                     alt={`${product.name} ${index + 1}`}
+                    width={200}
+                    height={200}
                     className="w-full h-full object-cover"
                   />
                 </div>

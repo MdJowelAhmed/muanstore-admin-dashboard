@@ -17,6 +17,7 @@ import { Label } from '@/components/ui/label';
 import { ImageUpload } from '@/components/dashboard/image-upload';
 import { News } from '@/types';
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 
 // Dynamically import Jodit Editor to avoid SSR issues
 const JoditEditor = dynamic(() => import('jodit-react'), {
@@ -202,9 +203,11 @@ export function NewsModal({ isOpen, onClose, news, mode }: NewsModalProps) {
             <div className="space-y-2">
               <Label>News Image</Label>
               <div className="w-full max-w-md bg-gray-100 rounded-lg overflow-hidden">
-                <img
+                <Image
                   src={news.image}
                   alt={news.title}
+                  height={200}
+                  width={200}
                   className="w-full h-auto object-cover"
                 />
               </div>

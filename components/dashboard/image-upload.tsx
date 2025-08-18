@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { X, Upload, Image as ImageIcon } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import Image from 'next/image';
 
 interface ImageUploadProps {
   value: File[];
@@ -108,9 +109,11 @@ export function ImageUpload({
           {existingImages.map((image, index) => (
             <div key={`existing-${index}`} className="relative group">
               <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden">
-                <img
+                <Image
                   src={image}
                   alt={`Existing Image ${index + 1}`}
+                  height={200}
+                  width={200}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -132,9 +135,11 @@ export function ImageUpload({
           {value.map((_, index) => (
             <div key={`new-${index}`} className="relative group">
               <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden">
-                <img
+                <Image
                   src={previews[index]}
                   alt={`New Image ${index + 1}`}
+                  height={200}
+                  width={200}
                   className="w-full h-full object-cover"
                 />
               </div>
